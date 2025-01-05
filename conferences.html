@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conferences - Valentina Moretti</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"> <!-- Aggiunto link per il font Inter -->
+  <link rel="icon" href="path/to/your/icon.png" type="image/png">
+  <style>
+
+    .conference-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 0.5rem; /* Tailwind's rounded-lg class equivalent */
+    }
+
+    .conference-item {
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .conference-item:last-child {
+      border-bottom: none;
+    }
+
+    /* Dark theme styles */
+    .dark-theme {
+      background-color: #1a202c; /* Dark background */
+      color: #f7fafc; /* Light text */
+    }
+
+    .dark-theme .conference-container {
+      background-color: #2d3748; /* Darker background for container */
+    }
+
+    .dark-theme .conference-item {
+      border-color: #4a5568; /* Darker border */
+    }
+
+    .dark-theme .bg-indigo-600 {
+      background-color: #2b2f6d; /* Darker indigo for navbar */
+    }
+
+    .dark-theme .text-indigo-600 {
+      color: #63b3ed; /* Lighter indigo text */
+    }
+
+    .dark-theme .text-gray-800 {
+      color: #f7fafc; /* Light text for headings */
+    }
+
+    .dark-theme .text-gray-600 {
+      color: #e2e8f0; /* Light text for paragraphs */
+    }
+
+    .dark-theme .bg-gray-100 {
+      background-color: #2d3748; /* Darker background for body */
+    }
+
+    .dark-theme p {
+      color: #f7fafc; /* Light text for paragraphs */
+    }
+
+  </style>
+</head>
+<body class="bg-gray-100 font-sans leading-relaxed text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-indigo-600 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex space-x-4">
+        <a href="index.html" class="text-white flex items-center space-x-2 hover:underline">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="publications.html" class="text-white flex items-center space-x-2 hover:underline">
+          <i class="fas fa-book"></i>
+          <span>Publications</span>
+        </a>
+        <a href="teaching.html" class="text-white flex items-center space-x-2 hover:underline">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <span>Teaching</span>
+        </a>
+        <a href="conferences.html" class="text-white flex items-center space-x-2 hover:underline">
+          <i class="fas fa-handshake"></i>
+          <span>Conferences</span>
+        </a>
+        <a href="awards.html" class="text-white flex items-center space-x-2 hover:underline">
+          <i class="fas fa-trophy"></i>
+          <span>Awards</span>
+        </a>
+      
+      </div>
+      <button onclick="toggleDarkMode()" class="ml-auto text-white bg-indigo-700 px-4 py-2 rounded-md hover:bg-indigo-800 transition-colors duration-300">
+        <i class="fas fa-moon"></i>
+      </button>        
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="conference-container rounded-lg">
+    <h1 class="text-3xl font-semibold text-gray-800 mb-6">Conferences</h1>
+    <ul class="space-y-4 list-disc pl-5">
+      <li class="conference-item">
+        <h2 class="flex justify-between font-bold text-indigo-600">
+          LOG24 Italy Meetup 2024
+          <span class="text-sm text-gray-600">4 - 7 Dec 2024</span>
+        </h2>
+        <p><i class="fas fa-map-marker-alt"></i> Siena</p>
+      </li>
+    </ul>
+  </div>
+  <script>
+    // Funzione per applicare o rimuovere il tema scuro
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-theme');
+      document.body.classList.toggle('bg-gray-100');
+    }
+  </script>
+</body>
+</html>
