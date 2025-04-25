@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index - Valentina Moretti</title> 
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="path/to/your/icon.png" type="image/png">
+  <style>
+    /* body {
+      background: url('gif.gif') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Sans-serif', Arial;
+      color: #333;
+    } */
+    /* Stile per i riquadri e hover */
+    .grid-item {
+      position: relative;
+      padding: 30px; /* Aggiunto padding per allungare il riquadro */
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: white;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .grid-item:hover {
+      transform: scale(1.05);
+    }
+    .grid-item:nth-child(1):hover {
+      background-color: #cce7ff; /* Azzurro */
+    }
+    .grid-item:nth-child(2):hover {
+      background-color: #ffddcc; /* Arancione chiaro */
+    }
+    .grid-item:nth-child(3):hover {
+      background-color: #e6ffcc; /* Verde chiaro */
+    }
+    .grid-item:nth-child(4):hover {
+      background-color: #f4ccff; /* Viola chiaro */
+    }
+    
+    /* Stile per l'immagine nella sezione "What I'm Doing" */
+    .no-border-image {
+      border: none;
+      box-shadow: none;
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Flex container per allineamento immagine e riquadri */
+    .flex-container {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap; /* Consente di far scorrere i riquadri in orizzontale */
+    }
+
+    /* Riquadri nella colonna di sinistra, l'immagine a destra */
+    .content-left {
+      flex: 2; /* Prende più spazio */
+    }
+
+    .content-right {
+      flex: 1;
+    }
+
+    /* Aggiungere margini e larghezza per permettere la continuità dei riquadri */
+    .full-width-grid {
+      width: 100%;
+    }
+
+    .invert {
+      background-color: #f7fafc; /* Cambia il colore di sfondo in bianco chiaro */
+      color: #1a202c; /* Testo scuro per contrastare con lo sfondo chiaro */
+    }
+
+    /* Escludere l'immagine dal filtro invert */
+    .no-invert img {
+      filter: none;
+    }
+    .btn {
+      background-color: #4c51bf; /* Indigo color */
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #2b2f6d; /* Hover effect darker indigo */
+    }
+
+    /* Dark theme styles */
+    .dark-theme {
+      background-color: #1a202c; /* Dark background */
+      color: #f7fafc; /* Light text */
+    }
+
+    .dark-theme .grid-item {
+      background-color: #2d3748; /* Darker background for grid items */
+      border-color: #4a5568; /* Darker border */
+    }
+
+    .dark-theme .grid-item:hover {
+      background-color: #4a5568; /* Darker hover effect */
+    }
+
+    .dark-theme .btn {
+      background-color: #2b2f6d; /* Darker button background */
+    }
+
+    .dark-theme .btn:hover {
+      background-color: #1a202c; /* Even darker button hover effect */
+    }
+
+    .dark-theme .bg-indigo-600 {
+      background-color: #2b2f6d; /* Darker indigo for navbar */
+    }
+
+    .dark-theme .text-indigo-600 {
+      color: #63b3ed; /* Lighter indigo text */
+    }
+
+    .dark-theme .bg-white {
+      background-color: #2d3748; /* Darker background for main container */
+    }
+
+    .dark-theme .text-gray-800 {
+      color: #f7fafc; /* Light text for headings */
+    }
+
+    .dark-theme .text-gray-600 {
+      color: #e2e8f0; /* Light text for paragraphs */
+    }
+
+    .dark-theme .bg-gray-100 {
+      background-color: #2d3748; /* Darker background for body */
+    }
+
+    .dark-theme .grid-item i {
+      color: #4b54ff; /* Color for the four symbols */
+    }
+
+    .dark-theme .grid-item h3 {
+      color: #f7fafc; /* Light color for the titles */
+    }
+  </style>
+  <script>
+    // Funzione per cambiare l'immagine dinamicamente
+    function changeImage(imagePath) {
+      document.getElementById('dynamic-image').src = imagePath;
+    }
+  </script>
+
+  <script>
+    // Funzione per applicare o rimuovere il tema scuro
+    function toggleInvert() {
+      document.body.classList.toggle('dark-theme');
+      document.body.classList.toggle('bg-gray-100');
+    }
+  </script>
+</head>
+<body class="bg-gray-100 font-sans leading-relaxed text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-indigo-600 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex space-x-4">
+        <a href="index.html" class="text-white flex items-center space-x-2 hover:underline">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="publications.html" class="text-white flex items-center space-x-2 hover:underline">
+          <i class="fas fa-book"></i>
+          <span>Publications</span>
+        </a>
+        <a href="teaching.html" class="text-white flex items-center space-x-2 hover:underline">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <span>Teaching</span>
+        </a>
+        <a href="conferences.html" class="text-white flex items-center space-x-2 hover:underline">
+          <i class="fas fa-handshake"></i>
+          <span>Conferences</span>
+        </a>
+        <a href="awards.html" class="text-white flex items-center space-x-2 hover:underline">
+          <i class="fas fa-trophy"></i>
+          <span>Awards</span>
+        </a>
+        
+      </div>
+      <button onclick="toggleInvert()" class="ml-auto text-white bg-indigo-700 px-4 py-2 rounded-md hover:bg-indigo-800 transition-colors duration-300">
+        <i class="fas fa-moon"></i>
+      </button>        
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="max-w-6xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg grid grid-cols-1 md:grid-cols-4 gap-6">
+    <!-- Left Sidebar (Profile) -->
+    <div class="col-span-1 bg-indigo-600 text-white p-6 rounded-lg min-h-full">
+      <div class="flex flex-col items-center space-y-4">
+        <div class="no-invert w-48 h-48 rounded-full overflow-hidden">
+          <img class="object-cover w-full h-full" src="fototessera.jpg" alt="Valentina Moretti">
+        </div>
+        <h1 class="text-2xl font-semibold">Valentina Moretti</h1>
+        <p class="text-lg">Ph.D. Student</p>
+      
+        <!-- Icone di GitHub e LinkedIn -->
+        <div class="flex space-x-6 mt-4">
+          <a href="https://github.com/yourgithub" target="_blank" class="text-gray-800 hover:text-indigo-600">
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/yourlinkedin/" target="_blank" class="text-gray-800 hover:text-indigo-600">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+        </div>
+
+        <!-- Bottone per scaricare il CV -->
+      <a href="path/to/your/cv.pdf" download class="text-white bg-indigo-700 px-6 py-3 rounded-md hover:bg-indigo-800 transition-colors duration-300 mb-4">
+        Download CV
+      </a>
+
+        <!-- Sezione delle informazioni -->
+        <div class="info-container">
+          <div class="info-item">
+            <i class="fas fa-briefcase"></i>
+            <span>
+              GMLG group 
+              Swiss AI lab IDSIA 
+              USI (Università della Svizzera Italiana)</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Lugano, Switzerland</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="col-span-3">
+      <!-- About Me Section -->
+      <h2 class="text-2xl font-semibold text-gray-800">About Me</h2>
+      <div class="mt-4 text-lg text-gray-600">
+        <p>
+          Hi! I am a Ph.D. student at the <a href="https://gmlg.ch/" target="_blank" class="font-bold text-indigo-600">Graph Machine Learning Group</a>, within the Swiss AI lab <a href="https://www.idsia.usi-supsi.ch/" target="_blank" class="font-bold text-indigo-600">IDSIA</a> and <a href="https://www.usi.ch/en" target="_blank" class="font-bold text-indigo-600">USI</a> - Università della Svizzera italiana (Switzerland), under the supervision of <a href="https://alippi.faculty.polimi.it/" target="_blank" class="font-bold text-indigo-600">Prof. Cesare Alippi</a>.
+        </p>
+        
+        <p>
+          I graduated with a Bachelor's degree in Computer Science from Politecnico di Milano, and I completed a double master's degree: one in High Performance Computing Engineering at Politecnico di Milano and the other in Computational Science at USI. Additionally, I participated in the <a href="https://eumaster4hpc.eu/?gad_source=1&gclid=EAIaIQobChMI8ZiVw8qnigMVX4qDBx2LKBy-EAAYASAAEgJzK_D_BwE" target="_blank" class="font-bold text-indigo-600">EUMASTER4HPC program</a>.
+        </p>
+        
+        
+      </div>
+
+      <!-- What I'm Doing Section -->
+      <div class="flex-container mt-10">
+        <div class="content-left">
+          <h2 class="text-2xl font-semibold text-gray-800">What I'm Doing</h2>
+          <p class="text-lg text-gray-600 mt-4">
+            Below are some of the key areas of my research and work, which combine technical knowledge and real-world applications.
+          </p>
+        </div>
+
+<!-- <style>
+  .max-h-96 {
+    max-height: 24rem; /* 96 in Tailwind CSS is 24rem */
+  }
+</style> 
+
+<div class="content-right">
+  <img id="dynamic-image" src="image1.jpg" alt="Research Illustration" class="no-border-image max-h-96">
+</div>
+
+ -->
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 full-width-grid">
+    <div class="grid-item">
+      <i class="fas fa-chart-line text-indigo-600 text-3xl"></i>
+      <h3 class="text-xl font-semibold mt-4">Time series Forecasting</h3>
+      <p class="mt-2 text-gray-600">The area of my research focused on improving the prediction of time series over time.</p>
+    </div>
+    <div class="grid-item">
+      <i class="fas fa-random text-indigo-600 text-3xl"></i>
+      <h3 class="text-xl font-semibold mt-4">Irregular Data</h3>
+      <p class="mt-2 text-gray-600">I aim to make predictions with the presence of spatial or temporal irregularities.</p>
+    </div>
+    <div class="grid-item">
+      <i class="fas fa-project-diagram text-indigo-600 text-3xl"></i>
+      <h3 class="text-xl font-semibold mt-4">Graph Neural Networks</h3>
+      <p class="mt-2 text-gray-600">I employ the use of spatio-temporal neural networks.</p>
+    </div>
+    <div class="grid-item">
+      <i class="fas fa-hand-holding-heart text-indigo-600 text-3xl"></i>
+      <h3 class="text-xl font-semibold mt-4">Ethical values</h3>
+      <p class="mt-2 text-gray-600">I conduct my research to achieve generalizable findings that lead to clear and meaningful progress in the field.</p>
+    </div>
+    <!-- </div> -->
+  </div>
+  <!-- Sezione "Find Me At" -->
+</div>
+</body>
+</html>
