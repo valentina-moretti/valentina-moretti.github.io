@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentina Moretti</title>
+    <meta
+      name="description"
+      content="PhD Student at the Swiss AI Lab @ IDSIA (USI) in Lugano. 
+      Working on time series forecasting in non-stationary environments @ Graph Machine Learning Group."
+    />
+  </head>
+  <body
+    class="min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6"
+  >
+    <script>
+      ;(() => {
+        try {
+          const d = document.documentElement
+          const c = d.classList
+          c.remove('light', 'dark')
+
+          const theme = localStorage.getItem('theme')
+          const resolved = theme === 'dark' ? 'dark' : 'light'
+          c.add(resolved)
+          d.style.colorScheme = resolved
+        } catch {
+          // ignore
+        }
+      })()
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
