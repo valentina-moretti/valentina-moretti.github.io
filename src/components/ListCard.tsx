@@ -25,7 +25,7 @@ export function ListCard({
   const Wrapper = href ? 'a' : 'div'
 
   return (
-    <div className="rounded-lg bg-card text-card-foreground flex">
+    <div className="rounded-lg bg-card/70 backdrop-blur text-card-foreground flex p-4">
       <div className="flex-none">
         <Wrapper
           {...(href

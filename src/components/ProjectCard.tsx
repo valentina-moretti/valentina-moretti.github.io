@@ -14,7 +14,7 @@ export function ProjectCard({
   links: { label: string; href: string }[]
 }) {
   return (
-    <div className="rounded-lg border bg-card text-card-foreground overflow-hidden">
+    <div className="rounded-lg border bg-card/70 backdrop-blur text-card-foreground overflow-hidden">
       {imageSrc ? (
         <div className="aspect-[16/9] w-full overflow-hidden bg-muted">
           <img

@@ -37,10 +37,6 @@ export type SiteContent = {
     avatarSrc?: string
     avatarFallback: string
   }
-  about: {
-    title: string
-    body: string
-  }
   work: {
     title: string
     items: ListCard[]
@@ -73,26 +69,22 @@ export type SiteContent = {
   dock: {
     github?: string
     linkedin?: string
+    x?: string
   }
 }
 
 import brain1 from '../assets/brain1.gif'
-import brain2 from '../assets/brain2.gif'
-import brain3 from '../assets/brain3.gif'
+// import brain2 from '../assets/brain2.gif'
+// import brain3 from '../assets/brain3.gif'
 import paperImg from '../assets/paper.jpg'
 
 export const site: SiteContent = {
   hero: {
-    heading: "I'm Valentina 👋",
+    heading: "Valentina Moretti",
     subheading:
-      "PhD Student at the Swiss AI Lab @ IDSIA (USI) in Lugano. Working on time series forecasting in non-stationary environments @ Graph Machine Learning Group.",
+      "PhD Student at the Swiss AI Lab @ IDSIA (USI) in Lugano. Working on time series forecasting @ Graph Machine Learning Group.",
     avatarSrc: '/src/assets/valentina.jpg',
     avatarFallback: 'VM',
-  },
-  about: {
-    title: 'About',
-    body:
-      "Hi there 👋\n\n- 🔭 I'm currently a **PhD Student** at the Swiss AI Lab **@ IDSIA (USI)** in Lugano\n- ⚡ Working on **time series forecasting** in **non-stationary environments** @ **Graph Machine Learning Group**\n- 🌱 Double **MSc** graduate from **PoliMI** and **USI**\n\n### What I'm doing\n\n- **Time series forecasting**: improving predictions over time\n- **Irregular data**: making predictions with spatial/temporal irregularities\n- **Graph Neural Networks**: spatio-temporal neural networks\n- **Ethical values**: generalizable findings and meaningful progress",
   },
   work: {
     title: 'Work Experience',
@@ -103,7 +95,7 @@ export const site: SiteContent = {
         date: 'Nov 2024 – Present',
         subtitle: 'PhD and Teaching Assistant',
         body:
-          'Lugano, Ticino, Switzerland · On-site. PhD research at IDSIA (Swiss AI Lab) focusing on time series forecasting in non-stationary environments within the Graph Machine Learning Group.',
+          'Lugano, Ticino, Switzerland · On-site. PhD research at IDSIA (Swiss AI Lab) focusing on time series forecasting within the Graph Machine Learning Group.',
         avatarSrc: '/src/assets/usi_universita_della_svizzera_italiana_logo.jpg',
         avatarTextFallback: 'U',
       },
@@ -122,7 +114,7 @@ export const site: SiteContent = {
         date: 'Sep 2022 – Sep 2024',
         subtitle: "Master's degree, High Performance Computing",
         body:
-          'Participation in theoretical and practical activities such as workshops, challenges, summer school and an internship.\n\nThis certificate acknowledges that Valentina Moretti has successfully completed the European Master\'s Programme in High-Performance Computing (HPC) and its applications in High-Performance Data Analytics (HPDA) and Artificial Intelligence (AI).',
+          'Participation in theoretical and practical activities such as workshops, challenges, summer school and an internship.',
         avatarSrc: '/src/assets/eumaster4hpc_logo.jpg',
         avatarTextFallback: 'E',
       },
@@ -167,10 +159,23 @@ export const site: SiteContent = {
   },
   projects: {
     badge: 'My Projects',
-    title: 'Check out some of my work',
+    title: 'Papers & Projects',
     subtitle:
-      "I've worked on a variety of projects, from simple websites to complex AI projects. Here are a few of my favorites.",
+      "",
     items: [
+      {
+        title: 'What Matters in Deep Learning for Time Series Forecasting?',
+        date: 'Dec 2025',
+        body:
+          'Why do some deep learning models work so well on time series, while others don\'t? Can current benchmarking practices reveal the true factors behind performance gains?\n\nMany thanks to Andrea Cini, Ivan Marisca, and Cesare Alippi for being part of this journey.',
+        imageSrc: paperImg,
+        links: [
+          {
+            label: 'arXiv',
+            href: 'https://arxiv.org/abs/2512.22702',
+          },
+        ],
+      },
       {
         title: 'Prion-disease',
         date: 'Project',
@@ -186,21 +191,14 @@ export const site: SiteContent = {
           // { label: 'gif', href: brain3 },
         ],
       },
-      {
-        title: 'What Matters in Deep Learning for Time Series Forecasting?',
-        date: 'Dec 2025',
-        body:
-          'Why do some deep learning models work so well on time series, while others don\'t? Can current benchmarking practices reveal the true factors behind performance gains?\n\nTomorrow, I\'ll present our work **“What Matters in Deep Learning for Time Series Forecasting?”** at the EurIPS workshop on Benchmarking and Evaluating AI.\n\nMany thanks to Andrea Cini, Ivan Marisca, and Cesare Alippi for being part of this journey.',
-        imageSrc: paperImg,
-        links: [],
-      },
+      
     ],
   },
   stories: {
     badge: 'Experiences',
-    title: 'Memorable stories',
+    title: 'Other Experiences',
     subtitle:
-      'During my time in university, I participated in many events. I love hanging out with sharp minds!',
+      '',
     items: [
       {
         date: 'Dec 2025',
@@ -213,20 +211,22 @@ export const site: SiteContent = {
       },
     ],
   },
-  contact: {
-    title: 'Get in Touch',
-    body:
-      "Want to chat? Just shoot me a dm [with a direct question on LinkedIn](https://www.linkedin.com/in/valentina-moretti-/) and I'll respond whenever I can.",
-    links: [
-      { label: 'GitHub', href: 'https://github.com/valentina-moretti' },
-      {
-        label: 'LinkedIn',
-        href: 'https://www.linkedin.com/in/valentina-moretti-/',
-      },
-    ],
-  },
+  // contact: {
+  //   title: 'Get in Touch',
+  //   body:
+  //     "Want to chat? Just shoot me a dm [with a direct question on LinkedIn](https://www.linkedin.com/in/valentina-moretti-/) and I'll respond whenever I can.",
+  //   links: [
+  //     { label: 'GitHub', href: 'https://github.com/valentina-moretti' },
+  //     {
+  //       label: 'LinkedIn',
+  //       href: 'https://www.linkedin.com/in/valentina-moretti-/',
+  //     },
+  //     { label: 'X', href: 'https://x.com/vale__moretti' },
+  //   ],
+  // },
   dock: {
     github: 'https://github.com/valentina-moretti',
     linkedin: 'https://www.linkedin.com/in/valentina-moretti-/',
+    x: 'https://x.com/vale__moretti',
   },
 }

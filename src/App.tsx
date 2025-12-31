@@ -4,14 +4,16 @@ import { ListCard } from './components/ListCard'
 import { Markdown } from './components/Markdown'
 import { ProjectCard } from './components/ProjectCard'
 import { TimelineItem } from './components/TimelineItem'
+import { WavyBackground } from './components/ui/wavy-background'
 import { site } from './content/site'
 import { useGsapReveal } from './lib/useGsapReveal'
+import { EncryptedText } from './components/ui/encrypted-text'
 
 export default function App() {
   useGsapReveal()
 
   return (
-    <>
+    <WavyBackground className="max-w-4xl mx-auto pb-40">
       <main className="flex flex-col min-h-[100dvh] space-y-10">
         <section id="hero">
           <div className="mx-auto w-full max-w-2xl space-y-8">
@@ -22,6 +24,7 @@ export default function App() {
                     data-reveal-hero
                     className="inline-block text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                   >
+                    {/* {<EncryptedText text={site.hero.heading} />} */}
                     {site.hero.heading}
                   </span>
                 </div>
@@ -36,7 +39,7 @@ export default function App() {
               </div>
 
               <div data-reveal className="shrink-0">
-                <span className="relative flex shrink-0 overflow-hidden rounded-full size-28 border">
+                <span className="relative flex shrink-0 overflow-hidden rounded-lg size-28 md:size-[200px] border">
                   {site.hero.avatarSrc ? (
                     <img
                       className="h-full w-full object-cover"
@@ -53,15 +56,6 @@ export default function App() {
                 </span>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section id="about">
-          <div data-reveal>
-            <h2 className="text-xl font-bold">{site.about.title}</h2>
-          </div>
-          <div data-reveal>
-            <Markdown>{site.about.body}</Markdown>
           </div>
         </section>
 
@@ -112,7 +106,7 @@ export default function App() {
 
         <section id="projects" className="space-y-4">
           <div data-reveal className="flex flex-col items-center text-center">
-            <Badge>{site.projects.badge}</Badge>
+            {/* <Badge>{site.projects.badge}</Badge> */}
             <h2 className="mt-4 text-3xl font-bold tracking-tighter sm:text-5xl">
               {site.projects.title}
             </h2>
@@ -140,7 +134,7 @@ export default function App() {
 
         <section id="experiences" className="space-y-4">
           <div data-reveal className="flex flex-col items-center text-center">
-            <Badge>{site.stories.badge}</Badge>
+            {/* <Badge>{site.stories.badge}</Badge> */}
             <h2 className="mt-4 text-3xl font-bold tracking-tighter sm:text-5xl">
               {site.stories.title}
             </h2>
@@ -158,7 +152,7 @@ export default function App() {
           </div>
         </section>
 
-        <section id="contact" className="space-y-3">
+        {/* <section id="contact" className="space-y-3">
           <div data-reveal>
             <h2 className="text-xl font-bold">{site.contact.title}</h2>
           </div>
@@ -178,10 +172,10 @@ export default function App() {
               </a>
             ))}
           </div>
-        </section>
+        </section> */}
       </main>
 
-      <Dock github={site.dock.github} linkedin={site.dock.linkedin} />
-    </>
+      <Dock github={site.dock.github} linkedin={site.dock.linkedin} x={site.dock.x} />
+    </WavyBackground>
   )
 }
