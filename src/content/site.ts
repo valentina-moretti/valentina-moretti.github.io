@@ -122,7 +122,7 @@ export const site: SiteContent = {
         title: 'USI Università della Svizzera italiana',
         href: 'https://www.usi.ch/en',
         date: 'Sep 2022 – Sep 2024',
-        subtitle: 'Master of Science (MS), Computational Science',
+        subtitle: 'Master of Science (MSc), Computational Science',
         body: 'GPA: 9.87/10',
         avatarSrc: '/src/assets/usi_universita_della_svizzera_italiana_logo.jpg',
         avatarTextFallback: 'U',
@@ -132,7 +132,7 @@ export const site: SiteContent = {
         href: 'https://www.polimi.it/en',
         date: 'Sep 2022 – Sep 2024',
         subtitle:
-          'Master of Engineering (MEng), High Performance Computing Engineering',
+          'Master of Science (MSc), High Performance Computing Engineering',
         body:
           'Final grade: 110L/110 · GPA: 29.53/30\n\nSkills: C++ · CUDA · Engineering · Python · Artificial Intelligence (AI) · Machine Learning · Parallel programming',
         avatarSrc: '/src/assets/polimi_logo.jpg',
@@ -142,7 +142,7 @@ export const site: SiteContent = {
         title: 'Politecnico di Milano',
         href: 'https://www.polimi.it/en',
         date: 'Sep 2019 – Jul 2022',
-        subtitle: 'BSc, Computer Engineering',
+        subtitle: 'BSc, Computer Science Engineering',
         body:
           'Final grade: 110L · GPA: 29.31/30\n\nSkills: Java · Assembly · C · SQL · Python · VHDL · Engineering',
         avatarSrc: '/src/assets/polimi_logo.jpg',
@@ -211,19 +211,19 @@ export const site: SiteContent = {
       },
     ],
   },
-  // contact: {
-  //   title: 'Get in Touch',
-  //   body:
-  //     "Want to chat? Just shoot me a dm [with a direct question on LinkedIn](https://www.linkedin.com/in/valentina-moretti-/) and I'll respond whenever I can.",
-  //   links: [
-  //     { label: 'GitHub', href: 'https://github.com/valentina-moretti' },
-  //     {
-  //       label: 'LinkedIn',
-  //       href: 'https://www.linkedin.com/in/valentina-moretti-/',
-  //     },
-  //     { label: 'X', href: 'https://x.com/vale__moretti' },
-  //   ],
-  // },
+  contact: {
+    title: 'Get in Touch',
+    body:
+      "Want to chat? Just shoot me a dm [with a direct question on LinkedIn](https://www.linkedin.com/in/valentina-moretti-/) and I'll respond whenever I can.",
+    links: [
+      { label: 'GitHub', href: 'https://github.com/valentina-moretti' },
+      {
+        label: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/valentina-moretti-/',
+      },
+      { label: 'X', href: 'https://x.com/vale__moretti' },
+    ],
+  },
   dock: {
     github: 'https://github.com/valentina-moretti',
     linkedin: 'https://www.linkedin.com/in/valentina-moretti-/',

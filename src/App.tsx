@@ -1,13 +1,10 @@
-import { Badge } from './components/Badge'
 import { Dock } from './components/Dock'
 import { ListCard } from './components/ListCard'
-import { Markdown } from './components/Markdown'
 import { ProjectCard } from './components/ProjectCard'
 import { TimelineItem } from './components/TimelineItem'
 import { WavyBackground } from './components/ui/wavy-background'
 import { site } from './content/site'
 import { useGsapReveal } from './lib/useGsapReveal'
-import { EncryptedText } from './components/ui/encrypted-text'
 
 export default function App() {
   useGsapReveal()
