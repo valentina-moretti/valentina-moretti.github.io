@@ -22,7 +22,8 @@
           c.remove('light', 'dark')
 
           const theme = localStorage.getItem('theme')
-          const resolved = theme === 'dark' ? 'dark' : 'light'
+          // Default to dark unless the user explicitly chose light.
+          const resolved = theme === 'light' ? 'light' : 'dark'
           c.add(resolved)
           d.style.colorScheme = resolved
         } catch {

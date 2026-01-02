@@ -4,7 +4,7 @@ const STORAGE_KEY = 'theme'
 
 export function getStoredTheme(): ThemeMode {
   const value = localStorage.getItem(STORAGE_KEY)
-  return value === 'dark' ? 'dark' : 'light'
+  return value === 'light' ? 'light' : 'dark'
 }
 
 export function applyTheme(theme: ThemeMode) {

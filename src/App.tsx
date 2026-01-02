@@ -149,6 +149,27 @@ export default function App() {
           </div>
         </section>
 
+        <section id="teaching" className="space-y-4">
+          <div className="flex flex-col items-center text-center">
+            <h2 className="mt-4 text-3xl font-bold tracking-tighter sm:text-5xl">
+              {site.teaching.title}
+            </h2>
+          </div>
+
+          <div className="flex justify-center">
+            <div className="w-full rounded-lg bg-card/70 backdrop-blur text-card-foreground p-4">
+              <div className="space-y-3">
+                {site.teaching.items.map((t) => (
+                  <div key={t.term} className="text-sm">
+                    <span className="font-semibold">{t.term}</span>
+                    <span className="text-muted-foreground"> — {t.body}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* <section id="contact" className="space-y-3">
           <div data-reveal>
             <h2 className="text-xl font-bold">{site.contact.title}</h2>

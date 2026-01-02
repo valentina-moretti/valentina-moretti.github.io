@@ -37,6 +37,13 @@ export type SiteContent = {
     avatarSrc?: string
     avatarFallback: string
   }
+  teaching: {
+    title: string
+    items: Array<{
+      term: string
+      body: string
+    }>
+  }
   work: {
     title: string
     items: ListCard[]
@@ -159,6 +166,7 @@ export const site: SiteContent = {
         date: 'Sep 2014 - Jun 2019',
         subtitle: 'High School Diploma',
         body: 'Final grade: 100/100',
+        avatarSrc: '/src/assets/tigli.png',
         avatarTextFallback: 'L',
       },
     ],
@@ -202,7 +210,7 @@ export const site: SiteContent = {
   },
   stories: {
     badge: 'Experiences',
-    title: 'Other Experiences',
+    title: 'News',
     subtitle:
       '',
     items: [
@@ -215,6 +223,14 @@ export const site: SiteContent = {
         logoSrc: euripsLogo,
         imageSrc: paperImg,
       },
+    ],
+  },
+  teaching: {
+    title: 'Teaching',
+    items: [
+      { term: 'Spr 2026', body: 'TA Advanced Topics in Machine Learning (MSc)' },
+      { term: 'Aut 2025', body: 'TA Graph Deep Learning (MSc)' },
+      { term: 'Spr 2025', body: 'TA Machine Learning (BSc)' },
     ],
   },
   contact: {

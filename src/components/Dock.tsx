@@ -14,7 +14,7 @@ export function Dock({
   x?: string
 }) {
   const [theme, setTheme] = useState<ThemeMode>(() =>
-    typeof window === 'undefined' ? 'light' : getStoredTheme(),
+    typeof window === 'undefined' ? 'dark' : getStoredTheme(),
   )
 
   const ThemeIcon = useMemo(() => (theme === 'dark' ? Sun : Moon), [theme])
