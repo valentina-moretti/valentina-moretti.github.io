@@ -76,6 +76,7 @@ export type SiteContent = {
   dock: {
     github?: string
     linkedin?: string
+    scholar?: string
     x?: string
   }
 }
@@ -249,6 +250,7 @@ export const site: SiteContent = {
   dock: {
     github: 'https://github.com/valentina-moretti',
     linkedin: 'https://www.linkedin.com/in/valentina-moretti-/',
+    scholar: 'https://scholar.google.com/citations?user=pHB1xJwAAAAJ&hl=it',
     x: 'https://x.com/vale__moretti',
   },
 }

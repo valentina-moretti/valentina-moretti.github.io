@@ -193,7 +193,12 @@ export default function App() {
         </section> */}
       </main>
 
-      <Dock github={site.dock.github} linkedin={site.dock.linkedin} x={site.dock.x} />
+      <Dock
+        github={site.dock.github}
+        linkedin={site.dock.linkedin}
+        scholar={site.dock.scholar}
+        x={site.dock.x}
+      />
     </WavyBackground>
   )
 }

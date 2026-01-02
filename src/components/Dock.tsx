@@ -1,4 +1,4 @@
-import { Github, Home, Linkedin, Moon, Sun, Twitter } from 'lucide-react'
+import { Github, GraduationCap, Home, Linkedin, Moon, Sun, Twitter } from 'lucide-react'
 import { useMemo, useState } from 'react'
 
 import { cn } from '../lib/cn'
@@ -7,10 +7,12 @@ import { applyTheme, getStoredTheme, type ThemeMode } from '../lib/theme'
 export function Dock({
   github,
   linkedin,
+  scholar,
   x,
 }: {
   github?: string
   linkedin?: string
+  scholar?: string
   x?: string
 }) {
   const [theme, setTheme] = useState<ThemeMode>(() =>
@@ -33,6 +35,12 @@ export function Dock({
         {linkedin ? (
           <DockButton href={linkedin} ariaLabel="LinkedIn" external>
             <Linkedin className="size-4" />
+          </DockButton>
+        ) : null}
+
+        {scholar ? (
+          <DockButton href={scholar} ariaLabel="Google Scholar" external>
+            <GraduationCap className="size-4" />
           </DockButton>
         ) : null}
 
